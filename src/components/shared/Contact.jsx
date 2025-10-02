@@ -83,7 +83,7 @@ const Contact = () => {
     try {
       // EmailJS configuration
       const serviceId = 'service_ty9k8pn';
-      const templateId = 'template_portfolio';
+      const templateId = 'template_j5o34hn';
       const publicKey = '7JtnDffmrFwdnRC1I';
 
       // Send email using EmailJS
