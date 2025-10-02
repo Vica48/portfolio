@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import { LanguageProvider } from './context/LanguageContext';
 import LanguageToggle from './components/LanguageToggle.jsx';
 
 // Shared Components

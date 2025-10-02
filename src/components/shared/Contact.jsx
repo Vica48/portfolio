@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
+import emailjs from '@emailjs/browser';
 import '../../styles/components.css';
 
 const Contact = () => {
   const { isSpanish } = useLanguage();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const content = {
     english: {
@@ -57,6 +66,49 @@ const Contact = () => {
   };
 
   const currentContent = isSpanish ? content.spanish : content.english;
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // EmailJS configuration
+      const serviceId = 'service_ty9k8pn';
+      const templateId = 'template_portfolio';
+      const publicKey = '7JtnDffmrFwdnRC1I';
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'vic.devand@gmail.com',
+        },
+        publicKey
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="contact">
@@ -133,10 +185,13 @@ const Contact = () => {
           </div>
           
           <div className="contact-form">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input 
                   type="text" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   placeholder={currentContent.form.name}
                   className="form-input"
                   required 
@@ -145,6 +200,9 @@ const Contact = () => {
               <div className="form-group">
                 <input 
                   type="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder={currentContent.form.email}
                   className="form-input"
                   required 
@@ -153,6 +211,9 @@ const Contact = () => {
               <div className="form-group">
                 <input 
                   type="text" 
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
                   placeholder={currentContent.form.subject}
                   className="form-input"
                   required 
@@ -160,15 +221,32 @@ const Contact = () => {
               </div>
               <div className="form-group">
                 <textarea 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   placeholder={currentContent.form.message}
                   className="form-textarea"
                   rows="5"
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="cta-button cta-primary">
-                {currentContent.form.sendMessage}
+              <button 
+                type="submit" 
+                className="cta-button cta-primary"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : currentContent.form.sendMessage}
               </button>
+              {submitStatus === 'success' && (
+                <p style={{ color: '#22c55e', marginTop: '1rem' }}>
+                  {isSpanish ? '¡Mensaje enviado exitosamente!' : 'Message sent successfully!'}
+                </p>
+              )}
+              {submitStatus === 'error' && (
+                <p style={{ color: '#ef4444', marginTop: '1rem' }}>
+                  {isSpanish ? 'Error al enviar mensaje. Por favor intenta de nuevo.' : 'Error sending message. Please try again.'}
+                </p>
+              )}
             </form>
           </div>
         </div>
