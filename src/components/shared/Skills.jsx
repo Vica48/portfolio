@@ -10,20 +10,20 @@ const Skills = () => {
       title: "Skills",
       categories: [
         {
-          title: "Frontend",
-          skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Sass", "Tailwind CSS"]
+          title: "Core Technologies",
+          skills: ["HTML5", "CSS3", "JavaScript", "TypeScript"]
         },
         {
-          title: "Backend",
-          skills: ["Node.js", "Express", "PHP"]
+          title: "Frameworks & Libraries",
+          skills: ["React", "Vue.js", "Bootstrap", "Tailwind CSS", "Sass"]
         },
         {
-          title: "Mobile",
-          skills: ["React Native"]
+          title: "Tools & Development",
+          skills: ["Git", "VS Code", "Figma", "Webpack", "Vite", "Chrome DevTools"]
         },
         {
-          title: "Tools & Others",
-          skills: ["Git", "VS Code", "Figma", "Postman", "Webpack", "Vite"]
+          title: "Learning & Growing",
+          skills: ["Next.js", "Redux", "Jest", "Responsive Design", "UI/UX Principles"]
         }
       ]
     },
@@ -31,20 +31,20 @@ const Skills = () => {
       title: "Habilidades",
       categories: [
         {
-          title: "Frontend",
-          skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Sass", "Tailwind CSS"]
+          title: "Tecnologías Principales",
+          skills: ["HTML5", "CSS3", "JavaScript", "TypeScript"]
         },
         {
-          title: "Backend",
-          skills: ["Node.js", "Express", "PHP"]
+          title: "Frameworks y Librerías",
+          skills: ["React", "Vue.js", "Bootstrap", "Tailwind CSS", "Sass"]
         },
         {
-          title: "Móvil",
-          skills: ["React Native"]
+          title: "Herramientas y Desarrollo",
+          skills: ["Git", "VS Code", "Figma", "Webpack", "Vite", "Chrome DevTools"]
         },
         {
-          title: "Herramientas y Otros",
-          skills: ["Git", "VS Code", "Figma", "Postman", "Webpack", "Vite"]
+          title: "Aprendiendo y Creciendo",
+          skills: ["Next.js", "Redux", "Jest", "Diseño Responsivo", "Principios UI/UX"]
         }
       ]
     }

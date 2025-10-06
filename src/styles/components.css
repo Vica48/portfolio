@@ -20,6 +20,19 @@
   pointer-events: none;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.header-container img {
+  display: flex;
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .header-content {
   position: relative;
   z-index: 1;

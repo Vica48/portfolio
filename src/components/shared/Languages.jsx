@@ -16,7 +16,7 @@ const Languages = () => {
         },
         {
           name: "English",
-          level: "Beginner Intermediate",
+          level: "Beginner",
           description: "Basic to intermediate level in both written and spoken English. Working on improving my proficiency."
         }
       ]

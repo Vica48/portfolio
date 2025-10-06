@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import '../../styles/components.css';
+import profilepicture from '../../images/profilepicture.jpg';
 
 const Header = () => {
   const { isSpanish } = useLanguage();
@@ -8,15 +9,15 @@ const Header = () => {
   const content = {
     english: {
       name: "Víctor Andrade",
-      title: "Full Stack Developer",
-      description: "Passionate about creating innovative digital solutions with modern technologies. I specialize in developing scalable web applications and mobile solutions that deliver exceptional user experiences.",
+      title: "Junior Frontend Developer",
+      description: "Passionate about creating beautiful and interactive user interfaces. I love learning modern frontend technologies and building engaging web experiences that users will love.",
       downloadCV: "Download CV",
       contactMe: "Contact Me"
     },
     spanish: {
       name: "Víctor Andrade",
-      title: "Desarrollador Full Stack",
-      description: "Apasionado por crear soluciones digitales innovadoras con tecnologías modernas. Me especializo en desarrollar aplicaciones web escalables y soluciones móviles que ofrecen experiencias de usuario excepcionales.",
+      title: "Desarrollador Frontend Junior",
+      description: "Apasionado por crear interfaces de usuario hermosas e interactivas. Me encanta aprender tecnologías frontend modernas y construir experiencias web atractivas que los usuarios adorarán.",
       downloadCV: "Descargar CV",
       contactMe: "Contáctame"
     }
@@ -26,7 +27,8 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="container">
+      <div className="container header-container">
+      <img src={profilepicture} alt="Cat" />
         <div className="header-content">
           <h1 className="name">{currentContent.name}</h1>
           <h2 className="title">{currentContent.title}</h2>

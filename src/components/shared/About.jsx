@@ -18,7 +18,7 @@ const About = () => {
         phone: "Phone",
         phoneValue: "+52 999 117 1768"
       },
-      description: "I am a passionate full-stack developer with over 3 years of experience in creating innovative digital solutions. My expertise spans across modern web technologies, mobile development, and cloud computing. I love turning complex problems into simple, beautiful, and intuitive solutions."
+      description: "I am a passionate junior frontend developer with a strong foundation in modern web technologies. I specialize in creating beautiful, responsive user interfaces and am constantly learning new frontend frameworks and tools. I love bringing designs to life and creating engaging user experiences."
     },
     spanish: {
       title: "Acerca de Mí",
@@ -32,7 +32,7 @@ const About = () => {
         phone: "Teléfono",
         phoneValue: "+52 999 117 1768"
       },
-      description: "Soy un desarrollador full-stack apasionado con más de 3 años de experiencia creando soluciones digitales innovadoras. Mi experiencia abarca tecnologías web modernas, desarrollo móvil y computación en la nube. Me encanta convertir problemas complejos en soluciones simples, hermosas e intuitivas."
+      description: "Soy un desarrollador frontend junior apasionado con una base sólida en tecnologías web modernas. Me especializo en crear interfaces de usuario hermosas y responsivas, y estoy constantemente aprendiendo nuevos frameworks y herramientas frontend. Me encanta dar vida a los diseños y crear experiencias de usuario atractivas."
     }
   };
 
