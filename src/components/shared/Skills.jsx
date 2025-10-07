@@ -15,7 +15,7 @@ const Skills = () => {
         },
         {
           title: "Frameworks & Libraries",
-          skills: ["React", "Vue.js", "Bootstrap", "Tailwind CSS", "Sass"]
+          skills: ["React", "Bootstrap", "Tailwind CSS", "Sass"]
         },
         {
           title: "Tools & Development",
@@ -23,7 +23,7 @@ const Skills = () => {
         },
         {
           title: "Learning & Growing",
-          skills: ["Next.js", "Redux", "Jest", "Responsive Design", "UI/UX Principles"]
+          skills: ["Next.js", "Redux", "Node.js", "Responsive Design", "UI/UX Principles"]
         }
       ]
     },
@@ -36,7 +36,7 @@ const Skills = () => {
         },
         {
           title: "Frameworks y Librerías",
-          skills: ["React", "Vue.js", "Bootstrap", "Tailwind CSS", "Sass"]
+          skills: ["React"  , "Bootstrap", "Tailwind CSS", "Sass"]
         },
         {
           title: "Herramientas y Desarrollo",
@@ -44,7 +44,7 @@ const Skills = () => {
         },
         {
           title: "Aprendiendo y Creciendo",
-          skills: ["Next.js", "Redux", "Jest", "Diseño Responsivo", "Principios UI/UX"]
+          skills: ["Next.js", "Redux", "Node.js", "Diseño Responsivo", "Principios UI/UX"]
         }
       ]
     }
